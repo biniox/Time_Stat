@@ -1,0 +1,100 @@
+body
+{
+    background-color: @body-background-color;
+}
+
+@font-face 
+{
+font-family: menu-link;
+src:url(fonts/BorisBlackBloxx.ttf);
+}
+
+.glyphicon-cog
+{
+    padding: 0px 10px;
+}
+
+
+ul:hover
+{
+    li:hover
+    {
+          background-color: #a09292;
+        a:hover 
+        {
+          background-color: #716363;  
+        }
+    }
+}
+
+.col-md-2
+{
+    height: 100%;
+    font-family: 'Baloo', cursive;
+    border-right: 1px solid #9f9f9f;
+}
+.col-md-10
+{
+    padding-top: 50px;
+}
+
+ .left
+ {
+   margin: 0px;
+   min-height: 500px;
+   padding-top: 45px;
+   text-align: center;
+   position: fixed;
+   width: 200px;
+   float: left;
+   text-size: 10px;
+   background-color: darken(@body-background-color, 2%);
+
+ }
+
+ .right
+ {
+     
+     float: right;
+ }
+
+.form-control, btn-default
+{
+    background-color:  @body-background-color;
+}
+
+.left_menu_link
+{
+
+  width: 100%;
+  margin-top: -10px;
+  margin-bottom: -13px;
+  color: white;
+  cursor: Pointer;
+  font-size: @font-size-base*1.5;
+  text-align: justify;
+    &:hover
+    {
+        background-color: darken(@body-background-color, 4%);
+    }
+
+}
+
+.stats
+{
+    width: 350px;
+    height: 300px;
+    border: 1px solid green;
+    border-radius: 10px;
+    background-color: @body-background-color;
+    opacity: 0.8;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+    
+}
+
+
+    
+
