@@ -7,13 +7,13 @@
 
     <title>TimeStat - Zaplanuj swoje zadania</title>
 
-    <meta name="description" content="Source code generated using layoutit.com">
-    <meta name="author" content="LayoutIt!">
+    <meta name="description" content="Lista zadań">
+    <meta name="author" content="Jarosław Bińczyk!">
     
     <link href="https://fonts.googleapis.com/css?family=Baloo" rel="stylesheet"> 
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/jquery.toolbar.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet">
-
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
       google.load("visualization", "1", {packages:["corechart"]});
@@ -241,24 +241,36 @@
                                             <td class="glyphicon glyphicon-option-vertical"></td>
                                         </tr>
                                         
-                                        
+                                        <br />
+                                   
                                     </table>
-                                    
-                                    
+                                    <div class="btn-group" role="group" aria-label="...">
+                                      <button type="button" class="btn btn-default">1</button>
+                                      <button type="button" class="btn btn-default">2</button>
+                                      <button type="button" class="btn btn-default">3</button>
+                                      <button type="button" class="btn btn-default">4</button>
+                                      <button type="button" class="btn btn-default" disabled="disabled">..</button>
+                                      <button type="button" class="btn btn-default">8</button>
+                                    </div>
+                                    <br />
+                                    <br />
+                                    <h4>Akcje zbiorowe:</h1>
+                                        <button type="button" class="btn btn-success" aria-label="Left Align">
+                                          <span class="glyphicon glyphicon-ok" aria-hidden="true"> Zakończone</span>
+                                        </button>
+                                        <button type="button" class="btn btn-info" aria-label="Left Align">
+                                          <span class="glyphicon glyphicon-calendar" aria-hidden="true"> Przełóż</span>
+                                        </button>
+                                        <button type="button" class="btn btn-primary" aria-label="Left Align">
+                                          <span class="glyphicon glyphicon-calendar" aria-hidden="true"> Udostępnij</span>
+                                        </button>                                 
                                     
                                   </div>
-
                                   <div class="col-lg-6">
                                    <div id="chart_div" style="width: 500px; height: 300px;"></div>
                                   </div>
-                                  
-                                  
-                                  
                          </div>
                       </div>
-            
-
-
 				</div>
 
 			</div>
@@ -269,5 +281,6 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/scripts.js"></script>
+    <script src="js/jquery.toolbar.js"></script>
   </body>
 </html>

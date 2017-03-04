@@ -6821,6 +6821,7 @@ table td:nth-child(3) {
 table td:nth-child(4) {
   color: grey;
 }
-h1 {
+h1,
+h4 {
   color: white;
 }
