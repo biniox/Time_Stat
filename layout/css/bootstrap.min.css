@@ -6788,3 +6788,39 @@ btn-default {
   text-align: center;
   padding-top: 20px;
 }
+.col-md-5 {
+  height: 100%;
+  border-right: 1px solid #9f9f9f;
+}
+table {
+  margin-top: 10px;
+  color: white;
+}
+table tr {
+  border-bottom: 1px solid grey;
+}
+table td:nth-child(2) {
+  width: 70%;
+  cursor: text;
+}
+table td:first-child,
+table td:nth-child(3),
+table td:nth-child(4) {
+  font-size: 20px;
+  padding: 10px;
+  cursor: pointer;
+}
+table td:first-child:hover,
+table td:nth-child(3):hover,
+table td:nth-child(4):hover {
+  background-color: #222020;
+}
+table td:nth-child(3) {
+  color: green;
+}
+table td:nth-child(4) {
+  color: grey;
+}
+h1 {
+  color: white;
+}

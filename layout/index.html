@@ -14,6 +14,31 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Styczeń', 'Sales', 'Expenses'],
+          ['Luty',  1000,      400],
+          ['Marzec',  1170,      460],
+          ['Kwiecień',  660,       1120],
+          ['Maj',  1030,      540]
+        ]);
+
+        var options = {
+          title: 'Twoja wydajność',
+          color: 'white',
+          legend: 'none',
+          backgroundColor: '#272525'
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+    
   </head>
   <body>
 
@@ -147,11 +172,10 @@
 				
 				<div class=" col-md-10 right">
 
-				<div class="row">
                       
                       
                       <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-lg-12" style="min-height:100%;">
                                   <div class="col-lg-6">
                                     <div class="input-group">
                                       <input type="text" class="form-control" placeholder="Zrobię...">
@@ -159,13 +183,80 @@
                                         <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-plus"></span></button>
                                       </span>
                                     </div>
+                                    
+                                    <h1>Dzisiaj</h1>
+                                    <table >
+                                        <tr>
+                                            <td class="glyphicon glyphicon-star-empty" ></td>
+                                            <td>Zrób Pranie  </td>
+                                            <td class="glyphicon glyphicon-ok"></td>
+                                            <td class="glyphicon glyphicon-option-vertical"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="glyphicon glyphicon-star-empty" ></td>
+                                            <td>Zrób Pranie  </td>
+                                            <td class="glyphicon glyphicon-ok"></td>
+                                            <td class="glyphicon glyphicon-option-vertical"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="glyphicon glyphicon-star-empty" ></td>
+                                            <td>Zrób Pranie  </td>
+                                            <td class="glyphicon glyphicon-ok"></td>
+                                            <td class="glyphicon glyphicon-option-vertical"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="glyphicon glyphicon-star-empty" ></td>
+                                            <td>Zrób Pranie  </td>
+                                            <td class="glyphicon glyphicon-ok"></td>
+                                            <td class="glyphicon glyphicon-option-vertical"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="glyphicon glyphicon-star-empty" ></td>
+                                            <td>Zrób Pranie  </td>
+                                            <td class="glyphicon glyphicon-ok"></td>
+                                            <td class="glyphicon glyphicon-option-vertical"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="glyphicon glyphicon-star-empty" ></td>
+                                            <td>Zrób Pranie  </td>
+                                            <td class="glyphicon glyphicon-ok"></td>
+                                            <td class="glyphicon glyphicon-option-vertical"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="glyphicon glyphicon-star-empty" ></td>
+                                            <td>Zrób Pranie  </td>
+                                            <td class="glyphicon glyphicon-ok"></td>
+                                            <td class="glyphicon glyphicon-option-vertical"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="glyphicon glyphicon-star-empty" ></td>
+                                            <td>Zrób Pranie  </td>
+                                            <td class="glyphicon glyphicon-ok"></td>
+                                            <td class="glyphicon glyphicon-option-vertical"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="glyphicon glyphicon-star-empty" ></td>
+                                            <td>Zrób Pranie  </td>
+                                            <td class="glyphicon glyphicon-ok"></td>
+                                            <td class="glyphicon glyphicon-option-vertical"></td>
+                                        </tr>
+                                        
+                                        
+                                    </table>
+                                    
+                                    
+                                    
                                   </div>
-                         </div>
-                        <div class="col-md-6">
-        
+
+                                  <div class="col-lg-6">
+                                   <div id="chart_div" style="width: 500px; height: 300px;"></div>
+                                  </div>
+                                  
+                                  
+                                  
                          </div>
                       </div>
-                </div>
+            
 
 
 				</div>

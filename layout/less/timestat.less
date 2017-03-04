@@ -95,6 +95,56 @@ ul:hover
     
 }
 
+.col-md-5
+{
+    height: 100%;
+    border-right: 1px solid #9f9f9f;
+}
+
+table
+{
+    margin-top: 10px;
+    color: white;
+    
+    tr 
+    {
+        border-bottom: 1px solid grey;
+    }
+  
+    
+    td:nth-child(2)
+    {
+        width: 70%;
+        cursor: text;
+
+    }
+    td:first-child, td:nth-child(3), td:nth-child(4)
+    {
+        font-size: 20px;
+        padding: 10px;
+        cursor: pointer;
+        
+        &:hover
+        {
+          background-color: darken(@body-background-color, 2%);  
+        }
+
+    }
+    
+    td:nth-child(3)
+    {
+        color: green;
+    }    
+    td:nth-child(4)
+    {
+        color: grey;
+    }
+}
+
+h1
+{
+    color: white;
+}
 
     
 
