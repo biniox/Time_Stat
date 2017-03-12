@@ -11,10 +11,15 @@
     <meta name="author" content="Jarosław Bińczyk!">
     
     <link href="https://fonts.googleapis.com/css?family=Baloo" rel="stylesheet"> 
-    <link href="<?php echo __DIR__ ?>cszs/bootstrap.min.css" rel="stylesheet">
-    <link href="css/jquery.toolbar.css" rel="stylesheet" />
-    <link href="css/style.css" rel="stylesheet">
+    <link href="app/css/bootstrap.min.css" rel="stylesheet">
+    <link href="app/css/jquery.toolbar.css" rel="stylesheet" />
+    <link href="app/css/style.css" rel="stylesheet">
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script src="app/js/jquery.min.js"></script>
+    <script src="app/js/bootstrap.min.js"></script>
+    <script src="app/js/scripts.js"></script>
+    <script src="app/js/jquery.toolbar.js"></script>
+    
     <script type="text/javascript">
       google.load("visualization", "1", {packages:["corechart"]});
       google.setOnLoadCallback(drawChart);
@@ -41,3 +46,7 @@
     
   </head>
   <body>
+
+    <div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">

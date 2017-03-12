@@ -1,6 +1,3 @@
-    <div class="container-fluid">
-	<div class="row">
-		<div class="col-md-12">
 			<nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
 				<div class="navbar-header">
 					 
@@ -110,3 +107,8 @@
 				</div>
 				
 			</nav>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="row">
