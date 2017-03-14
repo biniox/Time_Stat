@@ -52,7 +52,7 @@
                                         </tr>
                                         <tr>
                                             <td class="glyphicon glyphicon-star-empty" ></td>
-                                            <td>Zrób Pranie  </td>
+                                            <td> <?php echo md5(121212); ?>  </td>
                                             <td class="glyphicon glyphicon-ok"></td>
                                             <td class="glyphicon glyphicon-option-vertical"></td>
                                         </tr>
