@@ -101,7 +101,7 @@
 							</ul>
 						</li>
 						<li>
-							<a href="#" alt="logout" style="padding-right: 20px;" ><span class="glyphicon glyphicon-off"></span></a>
+							<a href="logout/" alt="../../logout.php" style="padding-right: 20px;" ><span class="glyphicon glyphicon-off"></span></a>
 						</li>
 					</ul>
 				</div>

@@ -11,17 +11,23 @@ $template = new template();
 if ((isset($_POST['login'])) || (isset($_POST['pass'])))
 {
 
-$template->login($_POST['login'], $_POST['pass']);
+$question = $template->login($_POST['login'], $_POST['pass'], $connect);
+    if($question == false)
+    {
+        $template->ShowWarning("Nieprawidłowy login lub hasło. Jeżeli nie pamiętasz hasła, możesz skorzystać z opcji 
+  <a href='#' class='alert-link'> przypomnienia hasła</a>");
+    }
+    
 	
 }
 	
 
 ?>
 
-	<form method="post" style="width: 300px; margin: auto;">
+	<form method="post" style="width: 300px; margin: auto; padding-top: 20px;">
 	
-		Login: <br /> <input type="text" class="form-control" name="login" /> <br />
-		Hasło: <br /> <input type="password" class="form-control" name="pass"/> <br /><br />
+		<span style="color: white;">Login:</span> <br /> <input type="text" class="form-control" name="login" /> <br />
+		<span style="color: white;">Hasło:</span> <br /> <input type="password" class="form-control" name="pass"/> <br /><br />
 		<input type="submit" class="btn btn-success" value="Zaloguj się" />
 	
 	</form>

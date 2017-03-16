@@ -1,24 +1,10 @@
 <?php
 class template
 {
-    public function showMessage($state, $Message)
-    {
-        switch($state)
-        {
-            case 'succes': 
-                echo $Message;
-                break;
-            case 'warning': 
-                echo $Message;  
-                break;
-        }
-
-    }
     
-    public function login($login, $pass)
+    public function login($login, $pass, $connect)
     {
       
-		
 		$login = htmlentities($login, ENT_QUOTES, "UTF-8");
 		$pass = md5(htmlentities($pass, ENT_QUOTES, "UTF-8"));
 	
@@ -54,8 +40,23 @@ class template
         }
 		
 		$connect->close();
-	
+	       return true;
 
+    }
+    
+    public function showtask($identy)
+    {
+      $identy = htmlentities(identy, ENT_QUOTES, "UTF-8");  
+        
+      
+    }
+    
+    public function showWarning($value)
+    {
+       echo "<div class='alert alert-danger' role='alert' style='width: 500px; margin: auto;'>";
+        echo $value;
+      echo "</div>";
+        
     }
     
     
