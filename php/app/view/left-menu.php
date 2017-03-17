@@ -1,6 +1,6 @@
 
 				<div class="col-md-2 left">
-                    <a class="dropdown-toggle" href="#" data-toggle="dropdown"><img src="img/profile.jpg" style="width: 70px; border-radius: 100%;"><h3> Jarek</h3></a>
+                    <a class="dropdown-toggle" href="#" data-toggle="dropdown"><img src="img/profile.jpg" style="width: 70px; border-radius: 100%;"><h3> <?php echo $user->login ?></h3></a>
                     <hr>
                     
                     <div class="left_menu_link"><span class="glyphicon glyphicon-inbox"> INBOX</span></div><br />

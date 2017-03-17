@@ -1,6 +1,4 @@
 				<div class=" col-md-10 right">
-
-                      
                       
                       <div class="row">
                         <div class="col-lg-12" style="min-height:100%;">

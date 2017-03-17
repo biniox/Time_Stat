@@ -15,7 +15,7 @@ $question = $template->login($_POST['login'], $_POST['pass'], $connect);
     if($question == false)
     {
         $template->ShowWarning("Nieprawidłowy login lub hasło. Jeżeli nie pamiętasz hasła, możesz skorzystać z opcji 
-  <a href='#' class='alert-link'> przypomnienia hasła</a>");
+  <a href='forget_pass' class='alert-link'> przypomnienia hasła</a>");
     }
     
 	
