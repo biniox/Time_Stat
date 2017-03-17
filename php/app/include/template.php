@@ -75,6 +75,7 @@ class template
 ////////////////////////////////////////////////////////////////////////////////////      
     public function ShowWarning($value)
     {
+       echo "<br><br>";
        echo "<div class='alert alert-danger' role='alert' style='width: 500px; margin: auto;'>";
         echo $value;
       echo "</div>";

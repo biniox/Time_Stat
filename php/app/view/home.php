@@ -1,4 +1,17 @@
-				<div class=" col-md-10 right">
+<?php
+$task_List = $tasks->showtask($_SESSION['id'], $connect);
+if(!$task_List)
+{
+    $template->ShowCriticalError("Nie udało się wykonać zapytania select");
+}
+
+$add_task = $tasks->AddTask("Przetestować dodawanie danych do bazy", $connect);
+if(!$add_task)
+{
+    $template->ShowCriticalError("Nie udało się wykonać zapytania insert");
+}
+?>
+                     <div class=" col-md-10 right">
                       
                       <div class="row">
                         <div class="col-lg-12" style="min-height:100%;">
@@ -12,68 +25,26 @@
                                     
                                     <h1>Dzisiaj</h1>
                                     <table >
-                                        <tr>
-                                            <td class="glyphicon glyphicon-star-empty" ></td>
-                                            <td>Zrób Pranie  </td>
-                                            <td class="glyphicon glyphicon-ok"></td>
-                                            <td class="glyphicon glyphicon-option-vertical"></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="glyphicon glyphicon-star-empty" ></td>
-                                            <td>Zrób Pranie  </td>
-                                            <td class="glyphicon glyphicon-ok"></td>
-                                            <td class="glyphicon glyphicon-option-vertical"></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="glyphicon glyphicon-star-empty" ></td>
-                                            <td>Zrób Pranie  </td>
-                                            <td class="glyphicon glyphicon-ok"></td>
-                                            <td class="glyphicon glyphicon-option-vertical"></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="glyphicon glyphicon-star-empty" ></td>
-                                            <td>Zrób Pranie  </td>
-                                            <td class="glyphicon glyphicon-ok"></td>
-                                            <td class="glyphicon glyphicon-option-vertical"></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="glyphicon glyphicon-star-empty" ></td>
-                                            <td>Zrób Pranie  </td>
-                                            <td class="glyphicon glyphicon-ok"></td>
-                                            <td class="glyphicon glyphicon-option-vertical"></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="glyphicon glyphicon-star-empty" ></td>
-                                            <td>Zrób Pranie  </td>
-                                            <td class="glyphicon glyphicon-ok"></td>
-                                            <td class="glyphicon glyphicon-option-vertical"></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="glyphicon glyphicon-star-empty" ></td>
-                                            <td> <?php echo md5(121212); ?>  </td>
-                                            <td class="glyphicon glyphicon-ok"></td>
-                                            <td class="glyphicon glyphicon-option-vertical"></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="glyphicon glyphicon-star-empty" ></td>
-                                            <td>Zrób Pranie  </td>
-                                            <td class="glyphicon glyphicon-ok"></td>
-                                            <td class="glyphicon glyphicon-option-vertical"></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="glyphicon glyphicon-star-empty" ></td>
-                                            <td>Zrób Pranie  </td>
-                                            <td class="glyphicon glyphicon-ok"></td>
-                                            <td class="glyphicon glyphicon-option-vertical"></td>
-                                        </tr>
+                                       <?php
+                                        for($i = $tasks->num_rows; $i>0; $i-- ) {
+                                            echo '<tr>
+                                                <td class="glyphicon glyphicon-star-empty" ></td>
+                                                <td>';
+                                                echo $task_List[$i-1]['value'];
+                                            echo '</td>
+                                                <td class="glyphicon glyphicon-ok"></td>
+                                                <td class="glyphicon glyphicon-option-vertical"></td>
+                                            </tr>';
+                                        }
+                                      ?>
                                         
                                         
-                                        <br />
+
                                    
                                     </table>
                                     
                                     
-                                    <div class="btn-group" role="group" aria-label="...">
+                                    <div class="btn-group" style="margin-top: 10px;" role="group" aria-label="...">
                                       <button type="button" class="btn btn-default">1</button>
                                       <button type="button" class="btn btn-default">2</button>
                                       <button type="button" class="btn btn-default">3</button>

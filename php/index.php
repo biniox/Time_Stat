@@ -1,41 +1,59 @@
 <?php
+session_start();
+ob_start();
 $view = isset($_GET['view']) ? $_GET['view'] : 'home';
 $dir = __DIR__.'/app/view/';
 $dir2 = __DIR__.'/app/outside/';
-require __DIR__.'/app/include/db.php';
-require __DIR__.'/app/include/template.php';
-require __DIR__.'/app/include/tasks.php';
 
-require __DIR__.'/app/view/head.php';
+require_once __DIR__.'/app/include/db.php';
+require_once __DIR__.'/app/include/template.php';
+require_once __DIR__.'/app/include/tasks.php';
 
+
+
+if(isset($_SESSION['logged']))
+{
 $template = new template($connect);
 $tasks = new tasks();
 $user = new user();
-$tasks->showtask($_SESSION['id'], $connect);
+
+
+
+
+
 
 $user->id = $_SESSION['id'];
-$user->login = $_SESSION['login'];
-
-require __DIR__.'/app/view/top-menu.php';
-require __DIR__.'/app/view/left-menu.php';
-
-
-
-
+$user->login = $_SESSION['login'];   
+    
+require_once $dir.'head.php';
+require_once $dir.'top-menu.php';
+require_once $dir.'left-menu.php'; 
+} else {
+require_once $dir2.'head.php';
+require_once $dir2.'top-menu.php';
+require_once $dir2.'left-menu.php';     
+}
 
 
 if (file_exists($dir.$view.'.php'))
 {
-    require $dir.$view.'.php';
+    if(isset($_SESSION['logged']))
+    {
+        require_once $dir.$view.'.php';    
+    } else {
+        header('Location: login');
+    }
+    
     
 } else if(file_exists($dir2.$view.'.php')){
     
-    require $dir.$view.'.php';
+    require_once $dir2.$view.'.php';
     
 } else {
-    echo '<center>HTTP/1.1 404 Not Found</center>';
+    header('Location: 404');
 }
 
 
-require __DIR__.'/app/view/foot.php';
+require_once __DIR__.'/app/view/foot.php';
+ob_end_flush();
 ?>

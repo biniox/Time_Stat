@@ -4,10 +4,14 @@ Order Allow,Deny
 Deny from all
 </FilesMatch>
 
+ErrorDocument 404 http://localhost/timestat/404.php
+
 RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
 RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+
 
 RewriteEngine on
 RewriteRule home index.php?view=home
 RewriteRule logout logout.php
 RewriteRule login login.php
+RewriteRule 404 404.php
