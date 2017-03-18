@@ -30,8 +30,7 @@ require_once $dir.'top-menu.php';
 require_once $dir.'left-menu.php'; 
 } else {
 require_once $dir2.'head.php';
-require_once $dir2.'top-menu.php';
-require_once $dir2.'left-menu.php';     
+require_once $dir2.'top-menu.php';     
 }
 
 

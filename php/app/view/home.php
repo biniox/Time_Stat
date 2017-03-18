@@ -1,15 +1,12 @@
 <?php
-$task_List = $tasks->showtask($_SESSION['id'], $connect);
-if(!$task_List)
-{
-    $template->ShowCriticalError("Nie udało się wykonać zapytania select");
-}
+$task_List = $tasks->ShowTask($user->id, $connect);
 
-$add_task = $tasks->AddTask("Przetestować dodawanie danych do bazy", $connect);
-if(!$add_task)
-{
-    $template->ShowCriticalError("Nie udało się wykonać zapytania insert");
-}
+
+//$add_task = $tasks->DeactivateTask("32", $connect);
+//if(!$add_task)
+//{
+//    $template->ShowCriticalError("Nie udało się wykonać zapytania update");
+//}
 ?>
                      <div class=" col-md-10 right">
                       
@@ -23,18 +20,24 @@ if(!$add_task)
                                       </span>
                                     </div>
                                     
-                                    <h1>Dzisiaj</h1>
+                                    <h1>Dzisiaj <?php echo (bool) $task_List[1]['star']; ?></h1>
                                     <table >
                                        <?php
+                                            
+                                        
                                         for($i = $tasks->num_rows; $i>0; $i-- ) {
-                                            echo '<tr>
-                                                <td class="glyphicon glyphicon-star-empty" ></td>
-                                                <td>';
-                                                echo $task_List[$i-1]['value'];
-                                            echo '</td>
-                                                <td class="glyphicon glyphicon-ok"></td>
-                                                <td class="glyphicon glyphicon-option-vertical"></td>
-                                            </tr>';
+                                            if(!$task_List[$i-1]['end'])
+                                            {
+                                                $star = ($task_List[$i-1]['star']) ? "yellow" : "";
+                                                    echo '<tr>
+                                                        <td class="glyphicon glyphicon glyphicon-star-empty '.$star.'" ></td>
+                                                        <td>';
+                                                        echo $task_List[$i-1]['value'];
+                                                    echo '</td>
+                                                        <td class="glyphicon glyphicon-ok"></td>
+                                                        <td class="glyphicon glyphicon-option-vertical"></td>
+                                                    </tr>';
+                                            }
                                         }
                                       ?>
                                         

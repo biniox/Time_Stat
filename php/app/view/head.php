@@ -42,6 +42,15 @@
         var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
         chart.draw(data, options);
       }
+        
+        
+        $(document).ready(function(){
+            $("button").click(function(){
+                $.ajax({url: "action/tasks.php?a=AddTask&value=testuje Ajaxa, success: function(result){
+                    $("#div1").html(result);
+                }});
+            });
+        });
     </script>
     
   </head>
