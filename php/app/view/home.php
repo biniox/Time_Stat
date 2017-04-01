@@ -26,8 +26,12 @@
                                             if(!$task_List[$i-1]['end'])
                                             {
                                                 $star = ($task_List[$i-1]['star']) ? "yellow" : "";
-                                                    echo '<tr id="'.$task_List[$i-1]["id"].'">
-                                                        <td class="SetStar '.$task_List[$i-1]["id"].' glyphicon glyphicon glyphicon-star-empty '.$star.'" name="'.$task_List[$i-1]["id"].'"></td>
+                                                    
+                                                    echo '<tr id="'.$task_List[$i-1]["id"].'">';
+                                                
+                                                    echo '<td class="glyphicon glyphicon-th-list"></td>';
+                                                
+                                                    echo '<td class="SetStar '.$task_List[$i-1]["id"].' glyphicon glyphicon glyphicon-star-empty '.$star.'" name="'.$task_List[$i-1]["id"].'"></td>
                                                         
                                                         <td class="value" data-toggle="modal" data-target=".value_edit">';
                                                         echo $task_List[$i-1]['value'];
@@ -76,27 +80,16 @@
                          </div>
                          
         <div id="user-options" class="toolbar-icons hidden" >
-			<a href="#"><i class="fa fa-user glyphicon glyphicon-pencil" > <b>Edytuj Zadanie</b></i></a>
-			<a href="#"><i class="fa fa-user glyphicon glyphicon-pencil"></i></a>
-			<a href="#"><i class="fa fa-user glyphicon glyphicon-paperclip"></i></a>
-			<a href="#"><i class="fa fa-user glyphicon glyphicon-wrench"></i></a>
-            <a href="#"><i class="fa fa-user glyphicon glyphicon-globe"></i></a>
-			<a href="#"><i class="fa fa-user glyphicon glyphicon-wrench"></i></a>
+			<a href="#"><i class="fa fa-user glyphicon glyphicon-pencil" ><b> Edytuj Zadanie</b></i></a>
+			<a href="#"><i class="fa fa-user glyphicon glyphicon-calendar" ><b> Kalendarz</b></i></a>
+            <a href="#"><i class="fa fa-user glyphicon glyphicon-paperclip" > <b> Załącznik</b></i></a>	
+			<a href="#"><i class="fa fa-user glyphicon glyphicon-bell" ><b> Ustaw Przypomnienie</b></i></a>
+			<a href="#"><i class="fa fa-user glyphicon glyphicon-flag" ><b> Priorytet</b></i></a>
 
-			
 		</div>
             
             
-<!--
-        <div class="modal value_edit" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
-            <div class="modal-dialog modal-sm" role="document">
-                <div class="modal-content">
-                    <input type="text" style="background-color: grey;"></input>
-                </div>
-            </div>
-        </div>
-    </div>
--->
+
 
 				
 				

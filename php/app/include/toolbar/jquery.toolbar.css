@@ -2,10 +2,9 @@
   background: #364347;
   width: 20px;
   height: 20px;
-
-  padding: 10px;
+/*  padding: 10px;*/
   border-radius: 6px;
-  display: block;
+/*  display: block;*/
   transition: none;
 }
 .btn-toolbar > i {
@@ -116,7 +115,7 @@
   color: white;
 }
 .tool-container {
-  background-color: #5e696d;
+  background-color: #fff;
   background-size: 100% 100%;
   border-radius: 6px;
   position: absolute;
@@ -136,19 +135,19 @@
   font-family: verdana;
   height: 100%;
   display: block;
-  width: 170px;
+  width: 200px;
   height: 35px;
-  text-align: center;
-  padding: 10px;
+  text-align: left;
+  padding: 5px;
   transition: none;
 }
 .tool-item > .fa {
-  color: #fff;
+  color: #000000;
   font-weight: 500;
 }
 .tool-item.selected,
 .tool-item:hover {
-  background: #02baf2;
+  background: #5c9fb4;
 }
 .tool-item.selected > .fa,
 .tool-item:hover > .fa {
