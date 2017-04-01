@@ -1,27 +1,24 @@
-<?php
-$task_List = $tasks->ShowTask($user->id, $connect);
 
+                    
 
-//$add_task = $tasks->DeactivateTask("32", $connect);
-//if(!$add_task)
-//{
-//    $template->ShowCriticalError("Nie udało się wykonać zapytania update");
-//}
-?>
-                     <div class=" col-md-10 right">
-                      
+                     <div class="home col-md-10 right">
+                        <?php
+                        $task_List = $tasks->ShowTask($user->id, $connect);
+                        ?>
                       <div class="row">
                         <div class="col-lg-12" style="min-height:100%;">
                                   <div class="col-lg-6">
                                     <div class="input-group">
-                                      <input type="text" class="form-control" placeholder="Zrobię...">
+                                      <input type="text" id="Add_Task" class="form-control" placeholder="Zrobię...">
                                       <span class="input-group-btn">
-                                        <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-plus"></span></button>
+                                        <button class="Add_Task_Button btn btn-default" type="button"><span class="glyphicon glyphicon-plus"></span></button>
                                       </span>
-                                    </div>
+
+                        </div>
+
                                     
-                                    <h1>Dzisiaj <?php echo (bool) $task_List[1]['star']; ?></h1>
-                                    <table >
+                                    <h1>Dzisiaj <?php echo (bool) $task_List[1]['star']; ?></h1>  
+                                    <table id="Task_List">
                                        <?php
                                             
                                         
@@ -29,13 +26,16 @@ $task_List = $tasks->ShowTask($user->id, $connect);
                                             if(!$task_List[$i-1]['end'])
                                             {
                                                 $star = ($task_List[$i-1]['star']) ? "yellow" : "";
-                                                    echo '<tr>
-                                                        <td class="glyphicon glyphicon glyphicon-star-empty '.$star.'" ></td>
-                                                        <td>';
+                                                    echo '<tr id="'.$task_List[$i-1]["id"].'">
+                                                        <td class="SetStar '.$task_List[$i-1]["id"].' glyphicon glyphicon glyphicon-star-empty '.$star.'" name="'.$task_List[$i-1]["id"].'"></td>
+                                                        
+                                                        <td class="value" data-toggle="modal" data-target=".value_edit">';
                                                         echo $task_List[$i-1]['value'];
                                                     echo '</td>
-                                                        <td class="glyphicon glyphicon-ok"></td>
-                                                        <td class="glyphicon glyphicon-option-vertical"></td>
+                                                    
+                                                        <td class="Deactivate_Task '.$task_List[$i-1]["id"].' glyphicon glyphicon-ok" name="'.$task_List[$i-1]["id"].'"></td>
+                                                        
+                                                        <td data-toolbar="user-options" class="'.$task_List[$i-1]["id"].' glyphicon glyphicon-option-vertical"></td>
                                                     </tr>';
                                             }
                                         }
@@ -73,8 +73,53 @@ $task_List = $tasks->ShowTask($user->id, $connect);
                                    <div id="chart_div" style="width: 500px; height: 300px;"></div>
                                   </div>
                          </div>
-                      </div>
-				</div>
+                         </div>
+                         
+        <div id="user-options" class="toolbar-icons hidden" >
+			<a href="#"><i class="fa fa-user glyphicon glyphicon-pencil" > <b>Edytuj Zadanie</b></i></a>
+			<a href="#"><i class="fa fa-user glyphicon glyphicon-pencil"></i></a>
+			<a href="#"><i class="fa fa-user glyphicon glyphicon-paperclip"></i></a>
+			<a href="#"><i class="fa fa-user glyphicon glyphicon-wrench"></i></a>
+            <a href="#"><i class="fa fa-user glyphicon glyphicon-globe"></i></a>
+			<a href="#"><i class="fa fa-user glyphicon glyphicon-wrench"></i></a>
+
+			
+		</div>
+            
+            
+<!--
+        <div class="modal value_edit" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+            <div class="modal-dialog modal-sm" role="document">
+                <div class="modal-content">
+                    <input type="text" style="background-color: grey;"></input>
+                </div>
+            </div>
+        </div>
+    </div>
+-->
+
+				
+				
+<div class="modal value_edit fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="gridSystemModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+dd
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->				
+				
+				
+
 				
 			
 		

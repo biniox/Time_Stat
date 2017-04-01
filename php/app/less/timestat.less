@@ -135,11 +135,19 @@ table
         font-size: 20px;
         padding: 10px;
         cursor: pointer;
-        
+
+    }
+
+    td:nth-child(3), td:nth-child(4)
+    {
+
+          border: solid darken(@body-background-color, 2%) 1px;
+          border-radius: 100px; 
         &:hover
         {
-          background-color: darken(@body-background-color, 2%);  
+            background-color: darken(@body-background-color, 2%); 
         }
+        
 
     }
     

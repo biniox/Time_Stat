@@ -17,5 +17,5 @@ function SecurePass($pass)
 }
 
 
-echo SecurePass("443FHJBS435");
+echo SecurePass("Jaroslaw123");
 ?>

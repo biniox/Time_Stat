@@ -38,8 +38,12 @@ class tasks
  ////////////////////////////////////////////////////////////////////////////////////    
     public function AddTask($id, $value, $connect)
     {
+        
         $value = htmlentities($value, ENT_QUOTES, "UTF-8");
-        if($sql = @$connect->query("insert into tasks (id, user_id, value) values (NULL, '".$id."', '".$value."')"))
+        if($sql = @$connect->query(
+		sprintf("insert into tasks (id, user_id, value) values (NULL, '%s', '%s')",
+		mysqli_real_escape_string($connect, $id),
+		mysqli_real_escape_string($connect, $value))))
         {
             return true;
 				

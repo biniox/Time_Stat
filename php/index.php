@@ -33,7 +33,6 @@ require_once $dir2.'head.php';
 require_once $dir2.'top-menu.php';     
 }
 
-
 if (file_exists($dir.$view.'.php'))
 {
     if(isset($_SESSION['logged']))

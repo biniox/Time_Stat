@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,44 +14,22 @@
     <link href="https://fonts.googleapis.com/css?family=Baloo" rel="stylesheet"> 
     <link href="app/css/bootstrap.min.css" rel="stylesheet">
     <link href="app/css/style.css" rel="stylesheet">
+	<link rel="stylesheet" href="app/css/themes/alertify.core.css" />
+	<link rel="stylesheet" href="app/css/themes/alertify.default.css" id="toggleCSS" />
+    <link href="app/include/toolbar/jquery.toolbar.css" rel="stylesheet">
+
+
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script src="app/js/jquery.min.js"></script>
+    <script src="app/include/toolbar/jquery.toolbar.min.js"></script>
     <script src="app/js/bootstrap.min.js"></script>
+	<script src="app/js/alertify.min.js"></script>
+    <script src="app/include/function.js"></script>
+    <script src="app/include/timestat.js"></script>
 
 
     
-    <script type="text/javascript">
-      google.load("visualization", "1", {packages:["corechart"]});
-      google.setOnLoadCallback(drawChart);
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Styczeń', 'Sales', 'Expenses'],
-          ['Luty',  1000,      400],
-          ['Marzec',  1170,      460],
-          ['Kwiecień',  660,       1120],
-          ['Maj',  1030,      540]
-        ]);
 
-        var options = {
-          title: 'Twoja wydajność',
-          color: 'white',
-          legend: 'none',
-          backgroundColor: '#272525'
-        };
-
-        var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
-        chart.draw(data, options);
-      }
-        
-        
-        $(document).ready(function(){
-            $("button").click(function(){
-                $.ajax({url: "action/tasks.php?a=AddTask&value=testuje Ajaxa, success: function(result){
-                    $("#div1").html(result);
-                }});
-            });
-        });
-    </script>
     
   </head>
   <body>
