@@ -40,7 +40,12 @@
 						</li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
-					
+					    <li>
+					        <a href="#" alt="TimeLine">45:00</a>
+					    </li>
+					    <li>
+					        <a href="#" alt="TimeLine"><button class="btn btn-info btn-xs">Start</button></a>
+					    </li>
 						<li>
 						                         
                      <div class="progress" style="width: 230px; margin: auto; margin-top: 10px; ">
@@ -57,7 +62,7 @@
 							<a href="#" alt="Powiadomienia"><span class="glyphicon glyphicon-bell"></span></a>
 						</li>
 						<li>
-							<a href="#" alt="Synchronizuj"><span class="glyphicon glyphicon-refresh"></span></a>
+							<a href="javascript:location.reload()" alt="Synchronizuj"><span class="glyphicon glyphicon-refresh"></span></a>
 						</li>
 						<li>
 							<a href="#" alt="Synchronizuj"><span class="glyphicon glyphicon-print"></span></a>

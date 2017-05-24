@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 18 Mar 2017, 12:33
+-- Czas generowania: 21 Maj 2017, 15:37
 -- Wersja serwera: 5.7.14
 -- Wersja PHP: 5.6.25
 
@@ -40,12 +40,28 @@ CREATE TABLE `tasks` (
 --
 
 INSERT INTO `tasks` (`id`, `user_id`, `value`, `star`, `date`, `end`) VALUES
-(33, 2, 'Daniel Dejniuch', 1, NULL, 1),
-(32, 2, 'Daniel Dejniuch', 1, NULL, 1),
-(34, 2, 'awdwadwadawd', 1, NULL, 0),
-(35, 2, 'Daniel Dejniuch', 1, NULL, 0),
-(36, 2, 'Daniel Dejniuch', 1, NULL, 0),
-(37, 2, 'Daniel Dejniuch', 0, NULL, 0);
+(218, 1, 'edfsefsefews', 0, NULL, 0),
+(217, 1, 'edfsefsefews', 0, NULL, 0),
+(216, 1, 'edfsefsefews', 0, NULL, 0),
+(215, 1, 'edfsefsefews', 0, NULL, 0),
+(214, 1, 'edfsefsefews', 0, NULL, 0),
+(213, 1, 'edfsefsefews', 0, NULL, 0),
+(212, 1, 'edfsefsefews', 0, NULL, 0),
+(211, 1, 'dwawdaw', 0, NULL, 0),
+(210, 1, 'dwawdaw', 0, NULL, 0),
+(209, 1, 'dwwadawddaniel', 0, NULL, 0),
+(208, 1, 'dwwadawd', 0, NULL, 0),
+(207, 1, 'adawdwd', 0, NULL, 0),
+(205, 1, 'cscscsc', 0, NULL, 0),
+(206, 1, 'adawdwd', 0, NULL, 0),
+(204, 1, 'cscscsc', 0, NULL, 0),
+(203, 1, 'cscscsc', 0, NULL, 0),
+(201, 1, 'cscscsc', 0, NULL, 1),
+(200, 1, 'cscscsc', 0, NULL, 1),
+(199, 1, 'cscscsc', 0, NULL, 1),
+(198, 1, 'cscscsc', 0, NULL, 1),
+(202, 1, 'cscscsc', 0, NULL, 1),
+(197, 1, 'lfe;mef', 1, NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -91,7 +107,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT dla tabeli `tasks`
 --
 ALTER TABLE `tasks`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=219;
 --
 -- AUTO_INCREMENT dla tabeli `users`
 --

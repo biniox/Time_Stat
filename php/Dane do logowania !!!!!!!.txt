@@ -1,0 +1,2 @@
+login: biniox
+haslo: 121212œ

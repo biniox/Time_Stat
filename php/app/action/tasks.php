@@ -5,6 +5,7 @@ require_once "../include/tasks.php";
 $task = new tasks();
 $action = $_GET['action'];
 $task_id = $_GET['id'];
+if(isset($_GET["value"])) $value = $_GET["value"];
 
 
 
@@ -24,6 +25,10 @@ switch($action)
         
     case "RemoveStar":
     echo $task->RemoveStar($task_id, $connect);
+    break;
+        
+    case "RenameTask":
+    echo $task->RenameTask($task_id, $value, $connect);
     break;
     
 

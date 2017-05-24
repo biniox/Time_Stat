@@ -66,10 +66,10 @@ class tasks
         }
     }
  ////////////////////////////////////////////////////////////////////////////////////    
-    public function RenameTask($id, $task_id, $value, $connect)
+    public function RenameTask($task_id, $value, $connect)
     {
         $value = htmlentities($value, ENT_QUOTES, "UTF-8");
-        if($sql = @$connect->query("update tasks set value = '".$value."' where user_id = '".$id."' AND id = '".$task_id."'"))
+        if($sql = @$connect->query("update tasks set value = '".$value."' where id = '".$task_id."'"))
         {
             return true;
 				

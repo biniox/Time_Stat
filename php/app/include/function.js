@@ -48,16 +48,22 @@ function SetStar(identy)
         })        
     }  
 ///////////////////////////////////////
-function RemoveStar(identy)
+function RenameTask(identy, value)
     {
-        var id = $(identy).attr('name');
-        var link = "app/action/tasks.php?action=RemoveStar&id=" + id;
+        
+        var link = "app/action/tasks.php?action=RenameTask&id=" + identy + "&value=" + value;
         $.get(link, function(data, status){
             if(!data)
                 {
-                    alertify.error('Nie udało się wykonać zapytania do bazy danych nogwiazdka'); 
+                    alertify.error('Nie udało się wykonać zapytania do bazy danych Rename Task'); 
+
+                } else {
+                    alertify.success('Zaaktualizowano treść zadania');
+
                 }
-        })        
+        });             
+        
+       
     }  
       
 

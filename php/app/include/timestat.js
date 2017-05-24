@@ -1,7 +1,7 @@
 
 
   $(document).ready(function(){
-
+      
 // toolbar
 $('td[data-toolbar="user-options"]').toolbar({
     content: '#user-options',
@@ -26,6 +26,7 @@ $('td[data-toolbar="user-options"]').toolbar({
             {
                 var add = "";
                 add += '<tr id="62">';
+                add += '<td class="glyphicon glyphicon-th-list"></td>';
                 add += '<td class="SetStar 62 glyphicon glyphicon glyphicon-star-empty " name="62"></td>';
                 
                 add += '<td class="value" data-toggle="modal" data-target=".value_edit">Daniel Dejniak</td>';
@@ -33,16 +34,17 @@ $('td[data-toolbar="user-options"]').toolbar({
                 add += '<td class="Deactivate_Task 62 glyphicon glyphicon-ok" name="62"></td>';                         
                 add += '<td data-toolbar="user-options" class="62 glyphicon glyphicon-option-vertical"></td>';
                 add += '</tr>';
-               $('#Task_List').prepend(add);     
+               $('#Task_List').append(add);     
             } else {
                 var add = "";
                 add += '<tr id="62">';
+                add += '<td class="glyphicon glyphicon-th-list"></td>';
                 add += '<td class="SetStar 62 glyphicon glyphicon glyphicon-star-empty " name="62"></td>';
                 add += '<td class="value" data-toggle="modal" data-target=".value_edit">Daniel Dejniak</td>';
                 add += '<td class="Deactivate_Task 62 glyphicon glyphicon-ok" name="62"></td>';                        
                 add += '<td data-toolbar="user-options" class="62 glyphicon glyphicon-option-vertical"></td>';
                 add += '</tr>';
-               $('#Task_List').prepend(add);                 
+               $('#Task_List').append(add);                 
             }
         }
 
@@ -60,10 +62,21 @@ $('td[data-toolbar="user-options"]').toolbar({
                 SetStar(this);
             }
     });
-      
-    $(".value").on("click", function() {
-      alert("dddd");  
-    
+
+// Po otwarciu okna modalnego Rename
+   $("( #(° ʖ °)").on("click", function() {
+       
+       
+   });   
+// Edycja zadania
+    $("#Rename_Button").on("click", function() {
+        var id = $(this).attr('name');
+        var value = $(".Rename").val();
+        var result = RenameTask(id, value); 
+        if(value == null) $(".value[name|='" + id +"']").text(value);
+            
     });
+      
+
 });   
       

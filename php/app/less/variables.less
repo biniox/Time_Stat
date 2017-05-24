@@ -19,7 +19,9 @@
 @brand-info:            #5bc0de;
 @brand-warning:         #f0ad4e;
 @brand-danger:          #d9534f;
-@body-background-color: #272525;
+//@body-background-color: #272525;
+//@body-background-color: rgba(23, 23, 23, 0.8);
+@body-background-color: rgb(39, 37, 37);
 
 //== Scaffolding
 //
@@ -46,7 +48,8 @@
 @font-family-serif:       Georgia, "Times New Roman", Times, serif;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 @font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
-@font-family-base:        @font-family-sans-serif;
+//@font-family-base:        @font-family-sans-serif;
+@font-family-base:        "Arial black";
 
 @font-size-base:          14px;
 @font-size-large:         ceil((@font-size-base * 1.25)); // ~18px
@@ -596,16 +599,16 @@
 @modal-title-line-height:     @line-height-base;
 
 //** Background color of modal content area
-@modal-content-bg:                             #fff;
+@modal-content-bg:                             rgba(255, 255, 255, 0.8);
 //** Modal content border color
-@modal-content-border-color:                   rgba(0,0,0,.2);
+@modal-content-border-color:                   rgba(0,0,0,.8);
 //** Modal content border color **for IE8**
 @modal-content-fallback-border-color:          #999;
 
 //** Modal backdrop background color
 @modal-backdrop-bg:           #000;
 //** Modal backdrop opacity
-@modal-backdrop-opacity:      .5;
+@modal-backdrop-opacity:      .3;
 //** Modal header border color
 @modal-header-border-color:   #e5e5e5;
 //** Modal footer border color
@@ -613,7 +616,7 @@
 
 @modal-lg:                    900px;
 @modal-md:                    600px;
-@modal-sm:                    300px;
+@modal-sm:                    200px;
 
 
 //== Alerts

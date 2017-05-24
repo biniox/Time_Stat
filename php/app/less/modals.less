@@ -51,6 +51,7 @@
 .modal-content {
   position: relative;
   background-color: @modal-content-bg;
+  background-color: @modal-content-bg;
   border: 1px solid @modal-content-fallback-border-color; //old browsers fallback (ie8 etc)
   border: 1px solid @modal-content-border-color;
   border-radius: @border-radius-large;
@@ -68,6 +69,7 @@
   bottom: 0;
   left: 0;
   z-index: @zindex-modal-background;
+  background-color: @modal-backdrop-bg;
   background-color: @modal-backdrop-bg;
   // Fade for backdrop
   &.fade { .opacity(0); }
